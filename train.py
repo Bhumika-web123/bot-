@@ -1,3 +1,5 @@
+"""Character-level encode/decode demo (learning track). Real SFT is finetune.py."""
+
 from tokenizer import encode, decode
 
 text = "morning"

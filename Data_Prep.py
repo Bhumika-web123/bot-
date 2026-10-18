@@ -1,9 +1,17 @@
-# this is my parser that extracts the bot an user pair from my json data
+# Learning-track parser (character vocab). The shipped chatbot uses Qwen SFT
+# via prepare_sft_data.py + finetune.py instead of this file.
 import json
-with open(
-    r"C:\Users\Bhumika\Desktop\chatbot\data\Conversation_1.json","r",encoding="utf-8"
-) as f:
-    data=json.load(f)
+from pathlib import Path
+
+RAW_PATH = Path("data/Conversation_1.json")
+if not RAW_PATH.exists():
+    raise FileNotFoundError(
+        "data/Conversation_1.json is not in this clone. "
+        "Use data/processed/*.jsonl with finetune.py, or restore the raw JSON."
+    )
+
+with open(RAW_PATH, "r", encoding="utf-8") as f:
+    data = json.load(f)
 
 pairs = []
 

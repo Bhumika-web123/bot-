@@ -1,20 +1,22 @@
 import json
+from pathlib import Path
 from transformers import AutoTokenizer
 
+from constants import MODEL_ID, RAW_CONVERSATIONS, TRAIN_JSONL
+
 # Load Qwen's actual tokenizer
-tokenizer = AutoTokenizer.from_pretrained(
-    "Qwen/Qwen2.5-0.5B-Instruct"
-)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 
-# Load our dataset
-with open("data/Conversation_1.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
-
-# Get the first conversation
-first_pair = data[0]["conversation"][0]
-
-user_text = first_pair["user"]
-bot_text = first_pair["bot"]
+if RAW_CONVERSATIONS.exists():
+    with RAW_CONVERSATIONS.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    first_pair = data[0]["conversation"][0]
+    user_text = first_pair["user"]
+    bot_text = first_pair["bot"]
+else:
+    record = json.loads(Path(TRAIN_JSONL).read_text(encoding="utf-8").splitlines()[0])
+    user_text = record["prompt"][-1]["content"]
+    bot_text = record["completion"][0]["content"]
 
 print("USER:")
 print(user_text)

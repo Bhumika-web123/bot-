@@ -4,8 +4,7 @@ from pathlib import Path
 from statistics import mean
 from transformers import AutoTokenizer
 
-MODEL_ID = "Qwen/Qwen2.5-0.5B-Instruct"
-MAX_LENGTH = 1024
+from constants import MAX_LENGTH, MODEL_ID, TRAIN_JSONL, VAL_JSONL
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 
@@ -28,10 +27,7 @@ def count_tokens(messages, add_generation_prompt=False):
 
     return len(result)
 
-for filename in [
-    "data/processed/train.jsonl",
-    "data/processed/validation.jsonl",
-]:
+for filename in [TRAIN_JSONL, VAL_JSONL]:
     records = [
         json.loads(line)
         for line in Path(filename).read_text(

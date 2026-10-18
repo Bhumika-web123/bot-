@@ -2,10 +2,9 @@
 import json
 from pathlib import Path
 
-FILES = [
-    "data/processed/train.jsonl",
-    "data/processed/validation.jsonl",
-]
+from constants import TRAIN_JSONL, VAL_JSONL
+
+FILES = [TRAIN_JSONL, VAL_JSONL]
 
 def load_records(filename):
     path = Path(filename)

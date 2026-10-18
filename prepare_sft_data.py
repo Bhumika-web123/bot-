@@ -1,14 +1,10 @@
 import json
 import random
-from pathlib import Path
 
-DATA_PATH = Path("data/Conversation_1.json")
-NEW_DATA_PATH = Path("data/Conversation_2.json")
-OUTPUT_DIR = Path("data/processed")
+from constants import RAW_CONVERSATIONS, PROCESSED_DIR, SYSTEM_PROMPT
 
-SYSTEM_PROMPT = (
-    "You are a helpful, friendly, and concise assistant."
-)
+DATA_PATH = RAW_CONVERSATIONS
+OUTPUT_DIR = PROCESSED_DIR
 
 VALIDATION_FRACTION = 0.20
 RANDOM_SEED = 42
@@ -65,8 +61,20 @@ def convert_group(group):
     return records
 
 
+<<<<<<< Updated upstream
 def save_jsonl(records, filename):
     path = OUTPUT_DIR / filename
+=======
+def main():
+    if not DATA_PATH.exists():
+        raise FileNotFoundError(
+            f"Raw conversations not found at {DATA_PATH}. "
+            "Processed JSONL under data/processed/ is already enough to train. "
+            "Restore Conversation_1.json only if you need to rebuild the split."
+        )
+
+    groups = load_conversations(DATA_PATH)
+>>>>>>> Stashed changes
 
     with path.open("w", encoding="utf-8") as file:
         for record in records:
