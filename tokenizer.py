@@ -1,3 +1,4 @@
+# Idk why I'm even messing with this file when it's fixed completely by chatgpt and idk how to make a tokenizer from scratch😭
 import json
 
 with open("data/vocab.json", "r", encoding="utf-8") as f:
