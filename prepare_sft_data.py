@@ -1,9 +1,9 @@
-
 import json
 import random
 from pathlib import Path
 
 DATA_PATH = Path("data/Conversation_1.json")
+NEW_DATA_PATH = Path("data/Conversation_2.json")
 OUTPUT_DIR = Path("data/processed")
 
 SYSTEM_PROMPT = (
@@ -19,12 +19,11 @@ def load_conversations(path):
         data = json.load(file)
 
     if not isinstance(data, list):
-        raise ValueError("Expected a list of conversation groups.")
+        raise ValueError(f"Expected a list in {path}")
 
     for group in data:
         if "conversation" not in group:
             raise ValueError("Missing 'conversation' field.")
-
         if not isinstance(group["conversation"], list):
             raise ValueError("'conversation' must be a list.")
 
@@ -32,7 +31,6 @@ def load_conversations(path):
 
 
 def convert_group(group):
-    """Create one training record per user/bot turn."""
     history = []
     records = []
 
@@ -44,7 +42,6 @@ def convert_group(group):
             print("Skipping an empty user/bot pair.")
             continue
 
-        # Include earlier turns and the current user message.
         prompt = [
             {"role": "system", "content": SYSTEM_PROMPT},
             *history,
@@ -60,7 +57,6 @@ def convert_group(group):
             "completion": completion,
         })
 
-        # Preserve the context for the next turn.
         history.extend([
             {"role": "user", "content": user_text},
             {"role": "assistant", "content": bot_text},
@@ -69,11 +65,21 @@ def convert_group(group):
     return records
 
 
-def main():
-    groups = load_conversations(DATA_PATH)
+def save_jsonl(records, filename):
+    path = OUTPUT_DIR / filename
 
-    # Split by conversation group, not individual turns.
-    shuffled = list(groups)
+    with path.open("w", encoding="utf-8") as file:
+        for record in records:
+            file.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+    print(f"Saved {len(records)} examples to {path}")
+
+
+def main():
+    # Split the original conversations exactly as before.
+    original_groups = load_conversations(DATA_PATH)
+
+    shuffled = list(original_groups)
     random.Random(RANDOM_SEED).shuffle(shuffled)
 
     validation_count = max(
@@ -95,25 +101,25 @@ def main():
         for record in convert_group(group)
     ]
 
+    # Add the new conversation to training only.
+    new_groups = load_conversations(NEW_DATA_PATH)
+
+    new_records = [
+        record
+        for group in new_groups
+        for record in convert_group(group)
+    ]
+
+    train_records.extend(new_records)
+
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    def save_jsonl(records, filename):
-        path = OUTPUT_DIR / filename
-
-        with path.open("w", encoding="utf-8") as file:
-            for record in records:
-                file.write(
-                    json.dumps(record, ensure_ascii=False) + "\n"
-                )
-
-        print(f"Saved {len(records)} records to {path}")
-
-    save_jsonl(train_records, "train.jsonl")
-    save_jsonl(validation_records, "validation.jsonl")
+    # Save new versions so the existing files remain untouched.
+    save_jsonl(train_records, "train_v2.jsonl")
+    save_jsonl(validation_records, "validation_v2.jsonl")
 
     print("\nDataset preparation complete.")
-    print(f"Training groups: {len(training_groups)}")
-    print(f"Validation groups: {len(validation_groups)}")
+    print(f"New examples added: {len(new_records)}")
     print(f"Training examples: {len(train_records)}")
     print(f"Validation examples: {len(validation_records)}")
 
