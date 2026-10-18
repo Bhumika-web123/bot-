@@ -1,0 +1,654 @@
+[
+  {
+    "example": 1,
+    "conversation": [
+      {
+        "user": "Good morning. I woke up at seven today.",
+        "bot": "Noted. You started your day at seven."
+      },
+      {
+        "user": "I made tea and spent some time looking at my phone.",
+        "bot": "Noted. Your morning began with tea and some phone time."
+      },
+      {
+        "user": "I wanted to study early, but I kept checking messages.",
+        "bot": "You planned to study early, but messages became a distraction."
+      },
+      {
+        "user": "I finally opened my statistics notes at nine.",
+        "bot": "Noted. Your focused study started at nine."
+      },
+      {
+        "user": "I studied probability for about an hour.",
+        "bot": "You completed about an hour of probability study. That is a useful start."
+      }
+    ]
+  },
+  {
+    "example": 2,
+    "conversation": [
+      {
+        "user": "The formulas were confusing at first, but they became clearer after I worked through examples.",
+        "bot": "Noted. Examples helped you understand the formulas more clearly."
+      },
+      {
+        "user": "I took a break and had breakfast.",
+        "bot": "Breakfast break recorded. A break after focused study can help you reset."
+      },
+      {
+        "user": "I spent the afternoon working on my chatbot project.",
+        "bot": "Noted. Your afternoon was dedicated to the chatbot project."
+      },
+      {
+        "user": "I created a tokenizer and learned how dictionaries work.",
+        "bot": "You made progress on the tokenizer and learned about character dictionaries."
+      },
+      {
+        "user": "I got stuck because I was not sure which kernel to select in Jupyter.",
+        "bot": "Noted. The Jupyter kernel caused some confusion today."
+      },
+      {
+        "user": "After checking the environment, I selected the correct kernel and everything worked.",
+        "bot": "Good. You resolved the environment issue and continued working."
+      },
+      {
+        "user": "I felt relieved when the notebook finally ran.",
+        "bot": "Noted. Solving the setup problem made the rest of the work feel easier."
+      }
+    ]
+  },
+  {
+    "example": 3,
+    "conversation": [
+      {
+        "user": "In the evening, I went for a short walk.",
+        "bot": "Your evening included a short walk."
+      },
+      {
+        "user": "I came back and reviewed what I had learned.",
+        "bot": "Noted. You ended the day by reviewing your learning."
+      },
+      {
+        "user": "I did not finish everything I planned, but I made progress.",
+        "bot": "You did not complete the entire plan, but you still moved the project forward."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Today’s notes are recorded."
+      }
+    ]
+  },
+  {
+    "example": 4,
+    "conversation": [
+      {
+        "user": "I woke up late today at ten.",
+        "bot": "Noted. You started your day at ten."
+      },
+      {
+        "user": "I felt annoyed because I had planned to wake up earlier.",
+        "bot": "Your actual start time was later than planned, and that affected your mood."
+      },
+      {
+        "user": "I skipped breakfast and went straight to my laptop.",
+        "bot": "Noted. You started working without having breakfast."
+      },
+      {
+        "user": "I watched a lecture about neural networks.",
+        "bot": "You spent part of your morning learning about neural networks."
+      },
+      {
+        "user": "The lecture was interesting, but I understood only the basic idea.",
+        "bot": "Noted. You understood the basic idea and may need another explanation for the details."
+      },
+      {
+        "user": "I tried implementing a small example in Python.",
+        "bot": "You followed the lecture with a practical experiment."
+      },
+      {
+        "user": "The code gave an error because I used the wrong variable name.",
+        "bot": "Noted. The error came from a variable-name mistake."
+      },
+      {
+        "user": "I fixed it after reading the error message carefully.",
+        "bot": "You solved the problem by examining the error message."
+      }
+    ]
+  },
+  {
+    "example": 5,
+    "conversation": [
+      {
+        "user": "I had lunch and then took a long break.",
+        "bot": "Noted. Your lunch break became longer than expected."
+      },
+      {
+        "user": "I found it difficult to start studying again.",
+        "bot": "Restarting after a long break was difficult today."
+      },
+      {
+        "user": "I eventually worked for forty minutes.",
+        "bot": "You managed to complete another forty minutes of work."
+      },
+      {
+        "user": "I think I should make smaller study goals.",
+        "bot": "That may help make it easier to begin and maintain momentum."
+      },
+      {
+        "user": "In the evening, I watched a movie.",
+        "bot": "Noted. You spent the evening relaxing with a movie."
+      },
+      {
+        "user": "I am going to sleep earlier tonight.",
+        "bot": "Noted. Your plan for tonight is to sleep earlier."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Your day has been recorded."
+      }
+    ]
+  },
+  {
+    "example": 6,
+    "conversation": [
+      {
+        "user": "Today was mostly a coding day.",
+        "bot": "Noted. Coding was the main activity today."
+      },
+      {
+        "user": "I started by reviewing yesterday’s code.",
+        "bot": "You began by reviewing your previous work."
+      },
+      {
+        "user": "I noticed that my tokenizer was not handling spaces properly.",
+        "bot": "Noted. Your tokenizer had an issue with spaces."
+      },
+      {
+        "user": "I changed the code and tested it with a few sentences.",
+        "bot": "You corrected the tokenizer and tested it with sample sentences."
+      },
+      {
+        "user": "The tests passed, so I felt more confident.",
+        "bot": "Noted. The successful tests increased your confidence."
+      },
+      {
+        "user": "I then created a character-to-ID dictionary.",
+        "bot": "You added a character-to-ID dictionary to the project."
+      },
+      {
+        "user": "I also created an ID-to-character dictionary.",
+        "bot": "You added the reverse dictionary for decoding."
+      },
+      {
+        "user": "I tested encoding and decoding the word hello.",
+        "bot": "You tested both directions using a simple word."
+      },
+      {
+        "user": "The original word came back correctly.",
+        "bot": "Noted. Your encoding and decoding process worked for that test."
+      },
+      {
+        "user": "I spent too much time changing small details.",
+        "bot": "You noticed that small details took more time than expected."
+      },
+      {
+        "user": "I should probably focus on one feature at a time.",
+        "bot": "That could help you keep the project moving without getting lost in minor changes."
+      },
+      {
+        "user": "I stopped working when I started feeling tired.",
+        "bot": "Noted. You stopped when your concentration began to drop."
+      },
+      {
+        "user": "I think that was a good decision.",
+        "bot": "You felt that ending the session was better than forcing more work."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Today’s coding progress is recorded."
+      }
+    ]
+  },
+  {
+    "example": 6,
+    "conversation": [
+      {
+        "user": "I woke up early and felt energetic.",
+        "bot": "Noted. You started the day feeling energetic."
+      },
+      {
+        "user": "I cleaned my desk before studying.",
+        "bot": "You prepared your workspace before beginning."
+      },
+      {
+        "user": "I studied descriptive statistics for two hours.",
+        "bot": "You completed two hours of descriptive statistics study."
+      },
+      {
+        "user": "I learned about mean, median, and mode.",
+        "bot": "Noted. Today’s topics included mean, median, and mode."
+      },
+      {
+        "user": "The median was easier to understand than I expected.",
+        "bot": "You found the median easier to understand than expected."
+      },
+      {
+        "user": "I struggled with variance and standard deviation.",
+        "bot": "Noted. Variance and standard deviation were more difficult today."
+      },
+      {
+        "user": "I solved several examples to understand them.",
+        "bot": "You used examples to work through the difficult concepts."
+      },
+      {
+        "user": "After lunch, I practiced SQL.",
+        "bot": "Your afternoon study session focused on SQL."
+      },
+      {
+        "user": "I solved three queries without looking at the answers.",
+        "bot": "You solved three queries independently."
+      },
+      {
+        "user": "I made mistakes in the fourth query.",
+        "bot": "Noted. The fourth query required more work."
+      },
+      {
+        "user": "I felt frustrated, but I kept trying.",
+        "bot": "You continued working despite feeling frustrated."
+      }
+    ]
+  },
+  {
+    "example": 7,
+    "conversation": [
+      {
+        "user": "I finally understood the join condition.",
+        "bot": "Noted. You eventually understood the join condition."
+      },
+      {
+        "user": "I want to practice joins again tomorrow.",
+        "bot": "Your plan for tomorrow is to practice joins again."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Your study topics and plans are recorded."
+      }
+    ]
+  },
+  {
+    "example": 8,
+    "conversation": [
+      {
+        "user": "I had a very distracted day.",
+        "bot": "Noted. Distraction was a major part of today."
+      },
+      {
+        "user": "I opened my laptop to study, but I kept switching between tabs.",
+        "bot": "You intended to study but frequently switched between tabs."
+      },
+      {
+        "user": "I spent almost an hour watching unrelated videos.",
+        "bot": "Noted. Unrelated videos took about an hour of your time."
+      },
+      {
+        "user": "I eventually closed everything except my notebook.",
+        "bot": "You reduced the distractions by keeping only your notebook open."
+      },
+      {
+        "user": "I studied for thirty minutes after that.",
+        "bot": "You completed thirty minutes of focused study after removing the distractions."
+      },
+      {
+        "user": "It was not much, but it was better than doing nothing.",
+        "bot": "Noted. You still completed a small amount of useful work."
+      },
+      {
+        "user": "I made lunch and cleaned the kitchen.",
+        "bot": "Your day also included preparing lunch and cleaning the kitchen."
+      },
+      {
+        "user": "In the afternoon, I read about language models.",
+        "bot": "You spent part of the afternoon learning about language models."
+      },
+      {
+        "user": "I learned that a language model predicts the next token.",
+        "bot": "Noted. You learned the basic next-token prediction idea."
+      },
+      {
+        "user": "That made the chatbot project feel less mysterious.",
+        "bot": "Understanding the prediction process made the project feel more manageable."
+      }
+    ]
+  },
+  {
+    "example": 9,
+    "conversation": [
+      {
+        "user": "I want to continue with the tokenizer tomorrow.",
+        "bot": "Your next planned task is to continue working on the tokenizer."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Today’s activities and tomorrow’s plan are recorded."
+      },
+      {
+        "user": "I started my day with a workout.",
+        "bot": "Noted. You began the day with a workout."
+      },
+      {
+        "user": "After that, I took a shower and had breakfast.",
+        "bot": "Your morning continued with a shower and breakfast."
+      },
+      {
+        "user": "I felt more awake after exercising.",
+        "bot": "Noted. You felt more alert after the workout."
+      },
+      {
+        "user": "I studied Python for an hour.",
+        "bot": "You completed an hour of Python study."
+      },
+      {
+        "user": "I practiced functions and loops.",
+        "bot": "Today’s Python practice focused on functions and loops."
+      },
+      {
+        "user": "I understood loops, but functions still confuse me sometimes.",
+        "bot": "Noted. Loops felt clearer, while functions still need practice."
+      },
+      {
+        "user": "I wrote a small program to calculate the average of numbers.",
+        "bot": "You applied your Python practice to a small averaging program."
+      },
+      {
+        "user": "The program worked after I corrected an indentation error.",
+        "bot": "You fixed an indentation error and got the program working."
+      }
+    ]
+  },
+  {
+    "example": 10,
+    "conversation": [
+      {
+        "user": "I spent the afternoon reading about probability.",
+        "bot": "Your afternoon was focused on probability."
+      },
+      {
+        "user": "I learned that probability values must be between zero and one.",
+        "bot": "Noted. You learned a basic property of probability."
+      },
+      {
+        "user": "I also learned about conditional probability.",
+        "bot": "You added conditional probability to today’s learning."
+      },
+      {
+        "user": "I want to revise both topics tomorrow.",
+        "bot": "Noted. Tomorrow’s revision will cover probability and conditional probability."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Your learning and revision plan are recorded."
+      }
+    ]
+  },
+  {
+    "example": 11,
+    "conversation": [
+      {
+        "user": "Today I worked on my project for most of the afternoon.",
+        "bot": "Noted. Your afternoon was mostly spent on the project."
+      },
+      {
+        "user": "I created a new Python file for the tokenizer.",
+        "bot": "You created a separate Python file for the tokenizer."
+      },
+      {
+        "user": "I wrote the first version of the encode function.",
+        "bot": "You implemented the first version of the encode function."
+      },
+      {
+        "user": "It converts characters into numbers.",
+        "bot": "Noted. Your encode function converts characters into numerical IDs."
+      },
+      {
+        "user": "I then wrote the decode function.",
+        "bot": "You implemented the reverse conversion using the decode function."
+      },
+      {
+        "user": "I tested both functions with the sentence hello world.",
+        "bot": "You tested encoding and decoding with a sample sentence."
+      },
+      {
+        "user": "The output matched the original sentence.",
+        "bot": "Noted. The test returned the original sentence correctly."
+      },
+      {
+        "user": "I was tempted to start building the neural network.",
+        "bot": "You considered moving ahead to the neural-network stage."
+      },
+      {
+        "user": "But I decided to finish the tokenizer first.",
+        "bot": "You chose to complete the current component before starting the next one."
+      },
+      {
+        "user": "I think that will make the project easier to understand.",
+        "bot": "Finishing one component at a time may make the project easier to follow."
+      },
+      {
+        "user": "I saved my work and closed the notebook.",
+        "bot": "Noted. You saved your work and ended the session."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Your tokenizer progress is recorded."
+      }
+    ]
+  },
+  {
+    "example": 12,
+    "conversation": [
+      {
+        "user": "I woke up at eight and had breakfast.",
+        "bot": "Noted. You started your day at eight and had breakfast."
+      },
+      {
+        "user": "I planned to study mathematics before lunch.",
+        "bot": "Your morning plan was to study mathematics before lunch."
+      },
+      {
+        "user": "I spent the first hour reviewing yesterday’s notes.",
+        "bot": "You began by reviewing yesterday’s notes."
+      },
+      {
+        "user": "I studied matrix multiplication after that.",
+        "bot": "Noted. Today’s mathematics topic was matrix multiplication."
+      },
+      {
+        "user": "The calculations were manageable on paper.",
+        "bot": "You found the calculations manageable when working on paper."
+      },
+      {
+        "user": "I tried the same calculations in NumPy.",
+        "bot": "You practiced the same concept using NumPy."
+      },
+      {
+        "user": "I made a mistake with the shape of one array.",
+        "bot": "Noted. An array-shape mistake caused a problem in NumPy."
+      },
+      {
+        "user": "I printed the shapes and fixed the calculation.",
+        "bot": "You used shape information to identify and fix the issue."
+      },
+      {
+        "user": "That was a useful debugging lesson.",
+        "bot": "Noted. Checking array shapes was a useful lesson today."
+      },
+      {
+        "user": "I spent the evening organizing my notes.",
+        "bot": "Your evening was spent organizing your study notes."
+      },
+      {
+        "user": "Tomorrow I want to practice matrix multiplication again.",
+        "bot": "Noted. You plan to practice matrix multiplication again tomorrow."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Your mathematics practice and plan are recorded."
+      },
+      {
+        "user": "Today I did not feel like studying.",
+        "bot": "Noted. Studying felt difficult to begin today."
+      },
+      {
+        "user": "I sat at my desk for a while without opening anything.",
+        "bot": "You spent some time at your desk before starting."
+      },
+      {
+        "user": "I decided to work for just fifteen minutes.",
+        "bot": "You set a small fifteen-minute study goal."
+      },
+      {
+        "user": "That made it easier to begin.",
+        "bot": "Noted. A smaller goal helped you get started."
+      },
+      {
+        "user": "I ended up working for almost an hour.",
+        "bot": "Your fifteen-minute goal turned into almost an hour of work."
+      },
+      {
+        "user": "I reviewed my tokenizer code.",
+        "bot": "You reviewed the tokenizer code during that session."
+      },
+      {
+        "user": "I found two places where the code could be clearer.",
+        "bot": "Noted. You identified two places for improvement."
+      },
+      {
+        "user": "I cleaned them up and added comments.",
+        "bot": "You improved the code and added comments for clarity."
+      },
+      {
+        "user": "I still did not finish the model.",
+        "bot": "The model is not finished yet, but you improved the project’s foundation."
+      },
+      {
+        "user": "I think starting small helped today.",
+        "bot": "Noted. A small starting goal helped you make progress."
+      },
+      {
+        "user": "I am going to rest now.",
+        "bot": "Your work session is complete. Rest is part of the plan too."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Today’s progress is recorded."
+      }
+    ]
+  },
+  {
+    "example": 13,
+    "conversation": [
+      {
+        "user": "I spent the morning learning about datasets.",
+        "bot": "Noted. Your morning focused on datasets."
+      },
+      {
+        "user": "I learned that text must be converted into numbers before a model can use it.",
+        "bot": "You learned why text needs to be represented numerically."
+      },
+      {
+        "user": "I created a small text file with conversations.",
+        "bot": "You created a small conversation dataset for the chatbot."
+      },
+      {
+        "user": "I kept the format consistent with User and Bot labels.",
+        "bot": "Noted. You used a consistent User and Bot format."
+      },
+      {
+        "user": "I checked the number of characters in the file.",
+        "bot": "You inspected the size of your text dataset."
+      },
+      {
+        "user": "I also checked how many unique characters it contained.",
+        "bot": "You checked the number of unique characters in the dataset."
+      },
+      {
+        "user": "Some punctuation marks appeared more often than I expected.",
+        "bot": "Noted. You observed differences in character frequency."
+      },
+      {
+        "user": "I think the next step is to build the vocabulary.",
+        "bot": "Your next planned step is to build the vocabulary."
+      },
+      {
+        "user": "I want to understand every part before moving on.",
+        "bot": "Noted. You want to understand each component before continuing."
+      },
+      {
+        "user": "I spent the evening reading about bigrams.",
+        "bot": "Your evening included learning about bigram models."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Your dataset preparation and next steps are recorded."
+      }
+    ]
+  },
+  {
+    "example": 14,
+    "conversation": [
+      {
+        "user": "I had a productive morning.",
+        "bot": "Noted. You felt that your morning was productive."
+      },
+      {
+        "user": "I studied for ninety minutes without checking my phone.",
+        "bot": "You completed ninety minutes of focused study without checking your phone."
+      },
+      {
+        "user": "I worked on probability distributions.",
+        "bot": "Today’s study topic was probability distributions."
+      },
+      {
+        "user": "I learned how probabilities can be normalized.",
+        "bot": "Noted. You learned how values can be normalized into probabilities."
+      }
+    ]
+  },
+  {
+    "example": 15,
+    "conversation": [
+      {
+        "user": "I used NumPy to calculate a small probability table.",
+        "bot": "You practiced probability calculations using NumPy."
+      },
+      {
+        "user": "The table helped me understand the concept better.",
+        "bot": "Noted. The probability table made the concept clearer."
+      },
+      {
+        "user": "I took a break after finishing the example.",
+        "bot": "You took a break after completing the example."
+      },
+      {
+        "user": "In the afternoon, I worked on the chatbot.",
+        "bot": "Your afternoon was dedicated to the chatbot."
+      },
+      {
+        "user": "I read through the tokenizer code again.",
+        "bot": "You reviewed the tokenizer code again."
+      },
+      {
+        "user": "I found the encode and decode functions easier to understand today.",
+        "bot": "Noted. The encoding and decoding functions felt clearer today."
+      },
+      {
+        "user": "I want to start the bigram model tomorrow.",
+        "bot": "Your planned next task is to start the bigram model tomorrow."
+      },
+      {
+        "user": "Good night.",
+        "bot": "Good night. Your focused study and chatbot progress are recorded."
+      }
+    ]
+  }
+]
