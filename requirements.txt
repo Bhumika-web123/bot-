@@ -1,7 +1,7 @@
 #CUDA 12.4 karlo agar aapko cloud gpu pe run karne me dikkat nhi hai (I mean apne aap ho jaega accel and peft use pytorch as a sub dependency)
 #Also I think abhi ke liye ye enough hai and chatgpt bhi agree karta hai😼
 
-transformers>=4.44.0
+transformers>=4.44.0,<5.0.0
 datasets>=3.0.0
 peft>=0.13.0
 trl>=0.12.0
